@@ -1,0 +1,17 @@
+{
+    "chainId": "97",
+    "chainCurrency": "BNB",
+    "contractAddress": "0x21bd030ecBF6C14F0e7491CF84dc2260C310B4E4",
+    "stakingTokenAddress": "0xD6991164Ce7ef551D792abCeA2d1E1f6eA89C704",
+    "stakingTokenSymbol": "PHICS",
+    "rewardTokenAddress": "0x601541b0c2804cCa1331BE00E37444C358cDE72e",
+    "rewardTokenSymbol": "MODEL",
+    "readOnlyApi": "https://data-seed-prebsc-1-s1.binance.org:8545/",
+    "infuraApi": "daf59723edda42bbb16bea0ab1c7ec3a",
+    "blockExplorer": "https://bscscan.com/",
+    "stakeTokenDecimal": 18,
+    "rewardTokenDecimal": 18,
+    "networkName": "Binance Smart Chain",
+    "airdropContractAddress": "0xbDA6FAB47B29eaaF7220c08C961c17Ec92C34D5D",
+    "covalentApi": "ckey_fbb027973c014e48a305dd2bf82"
+}

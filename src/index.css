@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #FBBD17;
+}
+
+.paginate-content {
+    display: flex;
+    justify-content: center;
+}
+
+.paginate-content>li {
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #FBBD17;
+    background-color: #000;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.footer-content {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+}
+
+.section-content {
+    min-height: 300px;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .paginate-content>li {
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,31 @@
+.card-body ul {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card-body ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card-body ul li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.card-body ul li.selected {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.card-body ul li:hover:not(.selected) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.card-body ul li.disabled {
+    display: none;
+}
