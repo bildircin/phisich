@@ -18,39 +18,39 @@ export const galleryApi = createApi({
 
             return headers
         },
-        tagTypes: ["Gallery"],
+        tagTypes: ['Gallery'],
 
 
     }),
     endpoints: (builder) => ({
         gallery: builder.query({
-            query: () => "/api/gallery/",
-            providesTags: ["Gallery"]
+            query: () => "https://phics.uncw3b.com/api/gallery/",
+            providesTags: ['Gallery']
 
         }),
         addGallery: builder.mutation({
             query: (gallery) => ({
-                url: `/api/gallery/add`,
+                url: `https://phics.uncw3b.com/api/gallery/add`,
                 method: "POST",
                 body: gallery
             }),
-            invalidatesTags: ["Gallery"]
+            invalidatesTags: ['Gallery']
         }),
         updateGallery: builder.mutation({
             query: (gallery) => ({
-                url: `/api/gallery/update`,
+                url: `https://phics.uncw3b.com/api/gallery/update`,
                 method: "PUT",
                 body: gallery
             }),
-            invalidatesTags: ["Gallery"]
+            invalidatesTags: ['Gallery']
         }),
         deleteGallery: builder.mutation({
             query: (id) => ({
-                url: `/api/gallery/delete`,
+                url: `https://phics.uncw3b.com/api/gallery/delete`,
                 method: "DELETE",
                 body: { id: id }
             }),
-            invalidatesTags: ["Gallery"]
+            invalidatesTags: ['Gallery']
         })
     })
 });

@@ -37,7 +37,7 @@ function SingleImage({ addModal, currentPhoto, closeModal }) {
     const tok = user.token
     const bearer = 'Bearer ' + tok
 
-    const API_URL = '/api/image/'
+    const API_URL = 'https://phics.uncw3b.com/api/image/'
 
     const onChange = (e) => {
         setElement((prevState) => ({

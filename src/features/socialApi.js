@@ -24,13 +24,13 @@ export const socialApi = createApi({
     }),
     endpoints: (builder) => ({
         socials: builder.query({
-            query: () => "/api/socials/",
+            query: () => "https://phics.uncw3b.com/api/socials/",
             providesTags: ["Socials"]
 
         }),
         addSocial: builder.mutation({
             query: (social) => ({
-                url: `/api/socials/add`,
+                url: `https://phics.uncw3b.com/api/socials/add`,
                 method: "POST",
                 body: social
             }),
@@ -38,7 +38,7 @@ export const socialApi = createApi({
         }),
         updateSocial: builder.mutation({
             query: (social) => ({
-                url: `/api/socials/update`,
+                url: `https://phics.uncw3b.com/api/socials/update`,
                 method: "PUT",
                 body: social
             }),
@@ -46,7 +46,7 @@ export const socialApi = createApi({
         }),
         deleteSocial: builder.mutation({
             query: (id) => ({
-                url: `/api/socials/delete`,
+                url: `https://phics.uncw3b.com/api/socials/delete`,
                 method: "DELETE",
                 body: { id: id }
             }),

@@ -24,13 +24,13 @@ export const addAirdropApi = createApi({
     }),
     endpoints: (builder) => ({
         airdrops: builder.query({
-            query: () => "/api/airdrop/",
+            query: () => "https://phics.uncw3b.com/api/airdrop/",
             providesTags: ["Airdrops"]
 
         }),
         addAirdrop: builder.mutation({
             query: (airdrop) => ({
-                url: `/api/airdrop/add`,
+                url: `https://phics.uncw3b.com/api/airdrop/add`,
                 method: "POST",
                 body: airdrop
             }),
@@ -38,7 +38,7 @@ export const addAirdropApi = createApi({
         }),
         updateAirdrop: builder.mutation({
             query: (airdrop) => ({
-                url: `/api/airdrop/update`,
+                url: `https://phics.uncw3b.com/api/airdrop/update`,
                 method: "PUT",
                 body: airdrop
             }),
@@ -46,7 +46,7 @@ export const addAirdropApi = createApi({
         }),
         deleteAirdrop: builder.mutation({
             query: (id) => ({
-                url: `/api/airdrop/delete`,
+                url: `https://phics.uncw3b.com/api/airdrop/delete`,
                 method: "DELETE",
                 body: { id: id }
             }),

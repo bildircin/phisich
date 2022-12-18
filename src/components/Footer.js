@@ -73,9 +73,9 @@ function Footer() {
 
     useEffect(() => {
         const getThings = async () => {
-            const settings = await axios.get('/api/settings');
-            const links = await axios.get('/api/menu');
-            const socialsQuery = await axios.get('/api/socials')
+            const settings = await axios.get('https://phics.uncw3b.com/api/settings');
+            const links = await axios.get('https://phics.uncw3b.com/api/menu');
+            const socialsQuery = await axios.get('https://phics.uncw3b.com/api/socials')
             setSiteSettings(settings.data[0]);
             setHeaderLinks(() => links.data.filter(e => e.menu_place == "footer"));
             setSocials(socialsQuery.data);

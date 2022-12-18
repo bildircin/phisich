@@ -24,13 +24,13 @@ export const settingApi = createApi({
     }),
     endpoints: (builder) => ({
         settings: builder.query({
-            query: () => "/api/settings",
+            query: () => "https://phics.uncw3b.com/api/settings",
             providesTags: ["Settings"]
 
         }),
         updateSetting: builder.mutation({
             query: (setting) => ({
-                url: `/api/settings/updatesettings`,
+                url: `https://phics.uncw3b.com/api/settings/updatesettings`,
                 method: "PUT",
                 body: setting
             }),

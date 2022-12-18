@@ -10,7 +10,7 @@ const initialState = {
     message: '',
 }
 //register user
-export const register = createAsyncThunk('/api/register', async (user, thunkAPI) => {
+export const register = createAsyncThunk('https://phics.uncw3b.com/api/register', async (user, thunkAPI) => {
     try {
         return await authService.register(user)
     } catch (error) {
@@ -74,7 +74,7 @@ export const authSlice = createSlice({
 
 
 //login user
-export const login = createAsyncThunk('/api/login', async (user, thunkAPI) => {
+export const login = createAsyncThunk('https://phics.uncw3b.com/api/login', async (user, thunkAPI) => {
     try {
         return await authService.login(user)
     } catch (error) {
@@ -88,7 +88,7 @@ export const login = createAsyncThunk('/api/login', async (user, thunkAPI) => {
     }
 })
 
-export const logout = createAsyncThunk('/api/logout', async () => {
+export const logout = createAsyncThunk('https://phics.uncw3b.com/api/logout', async () => {
     await authService.logout()
 })
 

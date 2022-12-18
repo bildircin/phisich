@@ -23,13 +23,13 @@ function PhotoModal({ modalIsOpen1, closeModal1, deletePhoto, choosePhoto }) {
   const tok = user.token
   const bearer = 'Bearer ' + tok
 
-  const SETTING_URL = '/api/settings'
+  const SETTING_URL = 'https://phics.uncw3b.com/api/settings'
 
   useEffect(() => {
     const callSetting = async () => {
       if (data) {
         console.log(data)
-        const newData = data.map((e) => ({ id: e.id, name: e.name, alt: e.alt, src: '/' + e.link, width: e.width, height: e.height }))
+        const newData = data.map((e) => ({ id: e.id, name: e.name, alt: e.alt, src: 'https://phics.uncw3b.com/' + e.link, width: e.width, height: e.height }))
         setPhotos(newData)
 
       }

@@ -39,7 +39,7 @@ function Gallery() {
     const tok = user.token
     const bearer = 'Bearer ' + tok
 
-    const SETTING_URL = '/api/settings'
+    const SETTING_URL = 'https://phics.uncw3b.com/api/settings'
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -72,8 +72,8 @@ function Gallery() {
                 }
             })
             if (data) {
-                const newData = data.map(e => ({ id: e.id, name: e.name, alt: e.alt, src: '/' + e.link, width: e.width, height: e.height, link: e.link }))
-                const photoMap = data.map(e => ({ src: '/' + e.link, width: Number(e.width), height: Number(e.height) }))
+                const newData = data.map(e => ({ id: e.id, name: e.name, alt: e.alt, src: 'https://phics.uncw3b.com/' + e.link, width: e.width, height: e.height, link: e.link }))
+                const photoMap = data.map(e => ({ src: 'https://phics.uncw3b.com/' + e.link, width: Number(e.width), height: Number(e.height) }))
                 setPhotos(photoMap)
                 setPhotoDetails(newData)
             }

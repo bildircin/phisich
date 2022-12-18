@@ -24,13 +24,13 @@ export const userApi = createApi({
     }),
     endpoints: (builder) => ({
         users: builder.query({
-            query: () => "/api/users",
+            query: () => "https://phics.uncw3b.com/api/users",
             providesTags: ["Users"]
 
         }),
         addUser: builder.mutation({
             query: (user) => ({
-                url: `/api/users/add`,
+                url: `https://phics.uncw3b.com/api/users/add`,
                 method: "POST",
                 body: user
             }),
@@ -38,7 +38,7 @@ export const userApi = createApi({
         }),
         updateUser: builder.mutation({
             query: (user) => ({
-                url: `/api/users/update`,
+                url: `https://phics.uncw3b.com/api/users/update`,
                 method: "PUT",
                 body: user
             }),
@@ -46,7 +46,7 @@ export const userApi = createApi({
         }),
         deleteUser: builder.mutation({
             query: (id) => ({
-                url: `/api/users/delete`,
+                url: `https://phics.uncw3b.com/api/users/delete`,
                 method: "DELETE",
                 body: { id: id }
             }),

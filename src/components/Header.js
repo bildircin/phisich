@@ -68,8 +68,8 @@ const ResponsiveAppBar = ({ pageLoading }) => {
 
     useEffect(() => {
         const getThings = async () => {
-            const settings = await axios.get('/api/settings');
-            const links = await axios.get('/api/menu');
+            const settings = await axios.get('https://phics.uncw3b.com/api/settings');
+            const links = await axios.get('https://phics.uncw3b.com/api/menu');
             setSiteSettings(settings.data[0]);
             setHeaderLinks(() => links.data.filter(e => e.menu_place == "header"));
             document.title = settings.data[0].title;

@@ -24,13 +24,13 @@ export const emailSettingsApi = createApi({
     }),
     endpoints: (builder) => ({
         emailSettings: builder.query({
-            query: () => "/api/mail",
+            query: () => "https://phics.uncw3b.com/api/mail",
             providesTags: ["EmailSettings"]
 
         }),
         testEmailSetting: builder.mutation({
             query: (emailSettings) => ({
-                url: `/api/mail/test`,
+                url: `https://phics.uncw3b.com/api/mail/test`,
                 method: "POST",
                 body: emailSettings
             }),
@@ -38,7 +38,7 @@ export const emailSettingsApi = createApi({
         }),
         updateEmailSetting: builder.mutation({
             query: (emailSettings) => ({
-                url: `/api/mail/update`,
+                url: `https://phics.uncw3b.com/api/mail/update`,
                 method: "PUT",
                 body: emailSettings
             }),

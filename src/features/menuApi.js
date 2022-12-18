@@ -24,13 +24,13 @@ export const menuApi = createApi({
     }),
     endpoints: (builder) => ({
         menus: builder.query({
-            query: () => "/api/menu/",
+            query: () => "https://phics.uncw3b.com/api/menu/",
             providesTags: ["Menus"]
 
         }),
         addMenu: builder.mutation({
             query: (menu) => ({
-                url: `/api/menu/add`,
+                url: `https://phics.uncw3b.com/api/menu/add`,
                 method: "POST",
                 body: menu
             }),
@@ -38,7 +38,7 @@ export const menuApi = createApi({
         }),
         updateMenu: builder.mutation({
             query: (menu) => ({
-                url: `/api/menu/update`,
+                url: `https://phics.uncw3b.com/api/menu/update`,
                 method: "PUT",
                 body: menu
             }),
@@ -46,7 +46,7 @@ export const menuApi = createApi({
         }),
         deleteMenu: builder.mutation({
             query: (id) => ({
-                url: `/api/menu/delete`,
+                url: `https://phics.uncw3b.com/api/menu/delete`,
                 method: "DELETE",
                 body: { id: id }
             }),
